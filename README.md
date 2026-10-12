@@ -20,6 +20,82 @@ python fretboard.py -t "D2 A2 D3 G3 B3 E4" -k D -o dropd.png     # 自訂調弦
 
 輸出格式由副檔名決定（`.png` / `.jpg`）。
 
+## 範例
+
+以下圖片都在 [`samples/`](samples/)，用對應的指令產生。
+
+### 吉他 C 大調，音名，主音標紅
+
+```bash
+python fretboard.py -o samples/guitar_C_major_notes.png --highlight-root
+```
+
+![guitar C major notes](samples/guitar_C_major_notes.png)
+
+### 吉他 G 大調，簡譜（1 = G）
+
+```bash
+python fretboard.py -o samples/guitar_G_major_jianpu.png -l jianpu -k G
+```
+
+![guitar G major jianpu](samples/guitar_G_major_jianpu.png)
+
+### 吉他全部 12 個音，15 格，輸出 JPG
+
+```bash
+python fretboard.py -o samples/guitar_all_notes_15fret.jpg -s all -f 15
+```
+
+![guitar all notes 15 frets](samples/guitar_all_notes_15fret.jpg)
+
+### 吉他 A 小調五聲音階，深色主題
+
+```bash
+python fretboard.py -o samples/guitar_A_minor_pentatonic_dark.png -s pentatonic-minor -k A -f 15 --highlight-root --theme dark
+```
+
+![guitar A minor pentatonic dark](samples/guitar_A_minor_pentatonic_dark.png)
+
+### 吉他 Drop D 調弦，F 大調簡譜，自訂標題
+
+```bash
+python fretboard.py -o samples/guitar_dropD_F_major_jianpu.png -l jianpu -k F -t "D2 A2 D3 G3 B3 E4" --title "Drop D | F major | 1 = F"
+```
+
+![guitar drop D F major jianpu](samples/guitar_dropD_F_major_jianpu.png)
+
+### 4 弦貝斯 C 大調，音名
+
+```bash
+python fretboard.py -o samples/bass4_C_major_notes.png -i bass4 -k C -s major --highlight-root
+```
+
+![bass4 C major notes](samples/bass4_C_major_notes.png)
+
+### 4 弦貝斯 E 大調簡譜，調外音以空心圓顯示
+
+```bash
+python fretboard.py -o samples/bass4_E_major_jianpu_showall.png -i bass4 -l jianpu -k E --show-all
+```
+
+![bass4 E major jianpu show all](samples/bass4_E_major_jianpu_showall.png)
+
+### 5 弦貝斯全部音，24 格，真實琴格比例
+
+```bash
+python fretboard.py -o samples/bass5_all_notes_24fret_real.png -i bass5 -s all -f 24 --spacing real
+```
+
+![bass5 all notes 24 frets real spacing](samples/bass5_all_notes_24fret_real.png)
+
+### 6 弦貝斯 C 大調，音名
+
+```bash
+python fretboard.py -o samples/bass6_C_major_notes.png -i bass6 -k C -s major --highlight-root
+```
+
+![bass6 C major notes](samples/bass6_C_major_notes.png)
+
 ## 參數
 
 | 參數 | 說明 |
